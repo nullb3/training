@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <title>Thirteen</title>
+     </head>
+     <body>
+      <h1>Interact with the prompts, please.</h1>
+      <p>This lab is an enhancement over the previous contact list implementation, this time we can add an user together.</p>
+      <p>NOTE: Current issues/knowledge won't allow us to use the button twice without reloading the page.</p>
+      <button id= "runButton" onClick="loadThirteen()">Run</button>
+      <script>
+         function loadThirteen(){
+            var script = document.createElement('script');
+            script.src="Thirteen.js";
+            document.body.appendChild(script);
+         }
+      </script>
+     </body>
+</html>
