@@ -13,13 +13,19 @@ let contacts = [{
 }];
     
 // write your code here
-let newc = contacts.length+1;
-window.prompt("Enter the name of the new contact.");
-contacts[newc].name = contacts[newc].name;
-window.prompt("Enter the phone of the new contact.");
-contacts[3].phone = contacts[3].phone ? contacts[3].phone : "a";
-window.prompt("Enter the email of the new contact.");
-contacts[3].email = contacts[3].email ? contacts[3].email : "a";
+
+let newContact = {
+    name: "",
+    phone: "",
+    email: ""
+};
+
+contacts.push(newContact);
+let add = contacts.length - 1;
+contacts[add].name = prompt("Enter the name of the new contact.", 0);
+contacts[add].phone = prompt("Enter the phone of the new contact.", 0);
+contacts[add].email = prompt("Enter the email of the new contact.", 0);
+
 // end your code here
     
 let last = contacts.length - 1;

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <title>Fifteen</title>
+     </head>
+     <body>
+      <h1>Interact with the prompts, please.</h1>
+      <p>This is a simple calculator that will enable you to do simple calculations by inputting 2 numbers and an operand.</p>
+      <p>NOTE: Current issues/knowledge won't allow us to use the button twice without reloading the page. The code will also accept letters but won't work properly.</p>
+      <button id= "runButton" onClick="load15()">Run</button>
+      <script>
+         function load15(){
+            var script = document.createElement('script');
+            script.src="core15.js";
+            document.body.appendChild(script);
+         }
+      </script>
+     </body>
+</html>
