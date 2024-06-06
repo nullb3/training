@@ -1,4 +1,4 @@
-# Hi, this will be a simple calculator that will be able to do the 4 basic math operations.
+# Welcome, this will be a simple calculator that will be able to do the 4 basic math operations.
 
 import sys
 
