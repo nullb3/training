@@ -1,11 +1,30 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿string[] myStrings = new string[2] { "I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices" };
+int periodLocation;
+string trim;
+string currentString;
 
-Random dice = new Random();
+foreach(string myString in myStrings){
+    
+    currentString = myString;
+    periodLocation = currentString.IndexOf(".");
 
-int rolld6 = dice.Next(1, 6);
-int rolld12 = dice.Next(1, 12);
-int rolld20 = dice.Next(1, 20);
+    while(periodLocation != -1){
+        // first sentence is the string value to the left of the period location
+        trim = currentString.Remove(periodLocation);
 
-Console.WriteLine($"D6 rolls: {rolld6}");
-Console.WriteLine($"D12 rolls: {rolld12}");
-Console.WriteLine($"D20 rolls: {rolld20}");
+        // the remainder of currentString is the string value to the right of the location
+        currentString = currentString.Substring(periodLocation + 1);
+
+        // remove any leading white-space from myString
+        currentString = currentString.TrimStart();
+
+        // update the comma location and increment the counter
+        periodLocation = currentString.IndexOf(".");
+
+        Console.WriteLine(trim);   
+    }
+
+    trim = currentString.Trim();
+    Console.WriteLine(trim);
+    
+}
